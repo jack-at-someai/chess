@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chess</h1>
+    <div class="game-layout">
+      <div class="side-panel top-panel">
+        <div class="player-info">
+          <span class="player-label" id="black-label">Black</span>
+          <div class="captured" id="black-captured"></div>
+        </div>
+      </div>
+      <div class="board-wrap">
+        <div class="coords coords-files top">
+          <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+        </div>
+        <div class="board-row">
+          <div class="coords coords-ranks left">
+            <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+          </div>
+          <div id="board" class="board"></div>
+          <div class="coords coords-ranks right">
+            <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+          </div>
+        </div>
+        <div class="coords coords-files bottom">
+          <span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span><span>g</span><span>h</span>
+        </div>
+      </div>
+      <div class="side-panel bottom-panel">
+        <div class="player-info">
+          <span class="player-label" id="white-label">White</span>
+          <div class="captured" id="white-captured"></div>
+        </div>
+      </div>
+    </div>
+    <p id="status" class="status">White to move</p>
+    <div class="buttons">
+      <button id="new-game-btn">New Game</button>
+      <button id="undo-btn">Undo</button>
+    </div>
+    <div id="move-log" class="move-log"></div>
+    <div id="promotion-modal" class="promotion-modal hidden">
+      <div class="promotion-choices"></div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
